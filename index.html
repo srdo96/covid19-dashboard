@@ -27,7 +27,7 @@
     </header>
     <!-- main start -->
     <main>
-      <div class="container mt-5">
+      <div class="container my-5">
         <div class="row">
           <div class="col">
             <p class="fs-3 text-center fw-bold">Covide-19 Current situation</p>
@@ -44,7 +44,7 @@
                 style="max-width: 18rem"
               >
                 <div class="card-body">
-                  <h5 class="card-title">Country</h5>
+                  <h5 id="country-name" class="card-title"></h5>
                   <p class="card-text"></p>
                 </div>
               </div>
@@ -60,7 +60,7 @@
                   >
                     <div class="card-body">
                       <h5 class="card-title">New Confirmed</h5>
-                      <p class="card-text"></p>
+                      <p id="new-confirmed" class="card-text fs-3 fw-bold"></p>
                     </div>
                   </div>
                 </div>
@@ -71,7 +71,10 @@
                   >
                     <div class="card-body">
                       <h5 class="card-title">Total Confirmed</h5>
-                      <p class="card-text"></p>
+                      <p
+                        id="total-confirmed"
+                        class="card-text fs-3 fw-bold"
+                      ></p>
                     </div>
                   </div>
                 </div>
@@ -82,7 +85,7 @@
                   >
                     <div class="card-body">
                       <h5 class="card-title">New Deaths</h5>
-                      <p class="card-text"></p>
+                      <p id="new-deaths" class="card-text fs-3 fw-bold"></p>
                     </div>
                   </div>
                 </div>
@@ -93,7 +96,7 @@
                   >
                     <div class="card-body text-center">
                       <h5 class="card-title">Total Deaths</h5>
-                      <p class="card-text"></p>
+                      <p id="total-deaths" class="card-text fs-3 fw-bold"></p>
                     </div>
                   </div>
                 </div>
@@ -101,6 +104,24 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- all countries -->
+      <div class="container input-group my-3">
+        <input
+          type="text"
+          class="form-control text-center"
+          placeholder="Search country"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          onclick="searchBtn()"
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+        >
+          Search
+        </button>
       </div>
     </main>
 
@@ -110,5 +131,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <!-- js -->
+    <script src="./js/api.js"></script>
   </body>
 </html>
